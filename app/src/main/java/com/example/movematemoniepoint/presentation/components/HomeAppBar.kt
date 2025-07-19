@@ -2,7 +2,8 @@ package com.example.movematemoniepoint.presentation.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.interaction.PressInteraction
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -15,9 +16,6 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowDropDown
-import androidx.compose.material.icons.filled.LocationOn
-import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -27,6 +25,8 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -36,7 +36,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.movematemoniepoint.R
 import com.example.movematemoniepoint.ui.theme.MoveMateMoniepointTheme
-import com.example.movematemoniepoint.ui.theme.Pink40
 import com.example.movematemoniepoint.ui.theme.PurplePrimary
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -44,10 +43,19 @@ import com.example.movematemoniepoint.ui.theme.PurplePrimary
 fun HomeAppBar(
     searchText: String,
     onSearchTextChange: (String) -> Unit,
-    onCartClicked: () -> Unit,
-    onNotificationClicked: () -> Unit,
-    onProfileClicked: () -> Unit
+    onEnterSearchMode: () -> Unit
 ) {
+
+    val interactionSource = remember { MutableInteractionSource() }
+
+    LaunchedEffect(interactionSource) {
+        interactionSource.interactions.collect { interaction ->
+            if (interaction is PressInteraction.Press) {
+                onEnterSearchMode()
+            }
+        }
+    }
+
     Column(
         modifier = Modifier
             .fillMaxWidth()
@@ -66,7 +74,7 @@ fun HomeAppBar(
                 modifier = Modifier
                     .size(54.dp)
                     .clip(CircleShape)
-                    .clickable { onProfileClicked() }
+
             )
 
             Spacer(modifier = Modifier.width(12.dp))
@@ -107,7 +115,7 @@ fun HomeAppBar(
 
             // Notification icon with white background
             IconButton(
-                onClick = { onNotificationClicked() },
+                onClick = {},
                 modifier = Modifier
                     .size(36.dp)
                     .padding(end = 8.dp)
@@ -125,10 +133,14 @@ fun HomeAppBar(
         // Search box
         TextField(
             value = searchText,
-            onValueChange = onSearchTextChange,
+            onValueChange = {
+                onSearchTextChange(it)
+            },
             modifier = Modifier
                 .fillMaxWidth()
                 .height(56.dp),
+            readOnly = true,
+            interactionSource = interactionSource,
             placeholder = {
                 Text(
                     text = "Enter the receipt number ...",
@@ -140,7 +152,8 @@ fun HomeAppBar(
                 Icon(
                     imageVector = Icons.Default.Search,
                     contentDescription = "Search Icon",
-                    tint = PurplePrimary
+                    tint = PurplePrimary,
+                    modifier = Modifier.padding(start = 8.dp)
                 )
             },
             trailingIcon = {
@@ -148,8 +161,7 @@ fun HomeAppBar(
                     modifier = Modifier
                         .size(40.dp)
                         .clip(CircleShape)
-                        .background(Color(0xFFE67E22))
-                        .clickable { onCartClicked() },
+                        .background(Color(0xFFE67E22)),
                     contentAlignment = Alignment.Center
                 ) {
                     Icon(
@@ -180,9 +192,7 @@ fun HomeAppBar(
 fun HomeAppBarPreview_Normal() {
     MoveMateMoniepointTheme {
         HomeAppBar(
-            onCartClicked = {},
-            onProfileClicked = {},
-            onNotificationClicked = {},
+            onEnterSearchMode = {},
             onSearchTextChange = {},
             searchText = ""
         )

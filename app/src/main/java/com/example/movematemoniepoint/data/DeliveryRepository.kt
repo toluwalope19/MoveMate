@@ -9,48 +9,59 @@ object DeliveryRepository {
     fun getAllDeliveries(): List<Delivery> = listOf(
 
         Delivery(
-            shipmentId = "SHIP-001",
-            deliveryItem = "Long Jeans",
-            time = "12:30 PM, Jul 12",
-            status = DeliveryStatus.COMPLETED,
-            addressFrom = "Lagos",
-            addressTo = "Abuja",
-            weight = "15kg",
-            orderDate = "Sep 20, 2023",
-            amount = 1400.00
-        ),
-        Delivery(
-            shipmentId = "SHIP-002",
-            deliveryItem = "Long Skirt",
-            time = "10:00 AM, Jul 14",
-            status = DeliveryStatus.IN_PROGRESS,
-            addressFrom = "New York",
-            addressTo = "Accra",
-            weight = "40kg",
-            amount = 1200.23,
-            orderDate = "Sep 20, 2024"
-        ),
-        Delivery(
-            shipmentId = "SHIP-003",
-            deliveryItem = "Television",
-            time = "10:00 AM, Jul 14",
-            status = DeliveryStatus.IN_PROGRESS,
-            addressFrom = "New York",
-            addressTo = "Lagos",
-            weight = "40kg",
-            amount = 1200.23,
-            orderDate = "Sep 20, 2021"
-        ),
-        Delivery(
-            shipmentId = "SHIP-004",
+            shipmentId = "#NEJ479132796545808",
             deliveryItem = "Macbook pro M2",
-            time = "10:00 AM, Jul 14",
+            time = "8:00 AM",
+            orderDate = "2025-07-19",
+            amount = 391.21,
+            status = DeliveryStatus.CANCELLED,
+            addressFrom = "Bogota",
+            addressTo = "France",
+            weight = "18kg"
+        ),
+        Delivery(
+            shipmentId = "#NEJ456932191512887",
+            deliveryItem = "Summer linen jacket",
+            time = "8:00 AM",
+            orderDate = "2025-07-19",
+            amount = 285.79,
             status = DeliveryStatus.IN_PROGRESS,
-            addressFrom = "Ibadan",
-            addressTo = "Jos",
-            weight = "40kg",
-            amount = 1200.23,
-            orderDate = "Aug 10, 2024"
+            addressFrom = "Dhaka",
+            addressTo = "Germany",
+            weight = "14kg"
+        ),
+        Delivery(
+            shipmentId = "#NEJ119175802450579",
+            deliveryItem = "Tapered-fit jeans AW",
+            time = "8:00 AM",
+            orderDate = "2025-07-19",
+            amount = 287.11,
+            status = DeliveryStatus.COMPLETED,
+            addressFrom = "Morocco",
+            addressTo = "Germany",
+            weight = "18kg"
+        ),
+        Delivery(
+            shipmentId = "#NEJ576974729557851",
+            deliveryItem = "Slim fit jeans AW",
+            time = "8:00 AM",
+            orderDate = "2025-07-19",
+            amount = 149.37,
+            status = DeliveryStatus.PENDING_ORDER,
+            addressFrom = "Dhaka",
+            addressTo = "Germany",
+            weight = "11kg"
+        ),
+        Delivery(
+            shipmentId = "#NEJ358357198243759",
+            deliveryItem = "Office setup desk",
+            time = "8:00 AM",
+            orderDate = "2025-07-19",
+            amount = 257.76,
+            status = DeliveryStatus.COMPLETED,
+            addressFrom = "Germany",
+            addressTo = "Barcelona",
+            weight = "7kg"
         ),
         Delivery(
             shipmentId = "SHIP-005",
