@@ -25,13 +25,10 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
-        // ✅ Set status bar color using Compose color (converted to ARGB)
         window.statusBarColor = PurplePrimary.toArgb()
 
-        // ✅ Light or dark status bar icons (false = white icons for dark background)
         WindowInsetsControllerCompat(window, window.decorView).isAppearanceLightStatusBars = false
 
-        // ✅ Ensure system bars don't overlay Compose UI unless you want that
         WindowCompat.setDecorFitsSystemWindows(window, true)
 
         setContent {
