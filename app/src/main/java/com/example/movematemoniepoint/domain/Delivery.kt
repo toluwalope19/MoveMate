@@ -15,6 +15,7 @@ data class Delivery(
     val addressFrom: String,
     val addressTo: String,
     val weight: String,
-    val imageUrl: String? = null
+    val imageUrl: String? = null,
+    val statusTitle: String? = null,
 )
 

@@ -11,13 +11,14 @@ object DeliveryRepository {
         Delivery(
             shipmentId = "#NEJ479132796545808",
             deliveryItem = "Macbook pro M2",
-            time = "8:00 AM",
+            time = "1day-2days",
             orderDate = "2025-07-19",
             amount = 391.21,
             status = DeliveryStatus.CANCELLED,
-            addressFrom = "Bogota",
-            addressTo = "France",
-            weight = "18kg"
+            addressFrom = "Bogota, 2345",
+            addressTo = "France, 1234",
+            weight = "18kg",
+            statusTitle = "Waiting to collect"
         ),
         Delivery(
             shipmentId = "#NEJ456932191512887",
@@ -152,7 +153,7 @@ object DeliveryRepository {
             orderDate = "Sep 10, 2019"
         ),
         Delivery(
-            shipmentId = "SHIP-002",
+            shipmentId = "SHIP-020",
             deliveryItem = "Macbook pro M3",
             time = "10:00 AM, Jul 14",
             status = DeliveryStatus.IN_PROGRESS,

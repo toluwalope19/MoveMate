@@ -33,6 +33,7 @@ import com.example.movematemoniepoint.presentation.components.SearchModeAppBar
 import com.example.movematemoniepoint.ui.theme.PurplePrimary
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.example.movematemoniepoint.presentation.components.DefaultHomeContent
 import com.example.movematemoniepoint.presentation.components.DeliverySearchResults
 
 import javax.inject.Inject
@@ -46,6 +47,7 @@ fun HomeScreen(viewModel: DeliveryViewModel = hiltViewModel()) {
 
     val searchText by viewModel.searchText.collectAsStateWithLifecycle()
     val deliveries by viewModel.filteredDeliveries.collectAsStateWithLifecycle()
+    val vehicles by viewModel.vehicles.collectAsStateWithLifecycle()
 
     LaunchedEffect(Unit) {
         appBarVisible.value = true
@@ -93,28 +95,26 @@ fun HomeScreen(viewModel: DeliveryViewModel = hiltViewModel()) {
             }
         }
 
-        // 🔁 Below content switches with search mode
-        if (isSearchMode) {
-            DeliverySearchResults(deliveries)
-        } else {
-            DefaultHomeContent()
+
+        AnimatedContent(
+            targetState = isSearchMode,
+            transitionSpec = {
+                fadeIn(tween(1500)) + slideInVertically(initialOffsetY = { it / 2 }) with
+                        fadeOut(tween(1300)) + slideOutVertically(targetOffsetY = { it / 2 })
+            },
+            label = "HomeContentTransition"
+        ) { inSearch ->
+            if (inSearch) {
+                DeliverySearchResults(deliveries)
+            } else {
+                DefaultHomeContent(deliveries, vehicles)
+            }
         }
+
     }
 
 }
 
 
-
-@Composable
-fun DefaultHomeContent() {
-    LazyColumn {
-        items(10) {
-            Text(
-                text = "Home item #$it",
-                modifier = Modifier.padding(16.dp)
-            )
-        }
-    }
-}
 
 
