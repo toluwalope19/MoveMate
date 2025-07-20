@@ -24,6 +24,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Color.Companion.White
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.navigation.NavController
 import com.example.movematemoniepoint.presentation.calculate.components.CalculateButton
 import com.example.movematemoniepoint.presentation.calculate.components.CategoriesSection
 import com.example.movematemoniepoint.presentation.calculate.components.DestinationSection
@@ -34,6 +35,7 @@ import com.example.movematemoniepoint.ui.theme.PurplePrimary
 @Composable
 fun CalculateScreen(
     onBack: () -> Unit = {},
+    navController: NavController,
     viewModel: CalculateViewModel = hiltViewModel()
 ) {
     val state = viewModel.destinationInputState
@@ -56,7 +58,7 @@ fun CalculateScreen(
                     .fillMaxWidth()
                     .padding(horizontal = 20.dp, vertical = 16.dp),
                 onClick = {
-
+                    navController.navigate("success")
                 }
             )
         }

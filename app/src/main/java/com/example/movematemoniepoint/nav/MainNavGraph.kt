@@ -8,6 +8,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.movematemoniepoint.presentation.calculate.CalculateScreen
+import com.example.movematemoniepoint.presentation.calculate.SuccessScreen
 import com.example.movematemoniepoint.presentation.components.BottomNav
 import com.example.movematemoniepoint.presentation.home.HomeScreen
 import com.example.movematemoniepoint.presentation.shipment.ShipmentScreen
@@ -21,9 +22,15 @@ fun MainNavGraph(modifier: Modifier) {
     ) { padding ->
         NavHost(navController, startDestination = "home", Modifier.padding(padding)) {
             composable("home") { HomeScreen() }
-            composable("calculate") { CalculateScreen() }
+            composable("calculate") {
+                CalculateNavGraph(navController)
+            }
             composable("shipment") { ShipmentScreen() }
             composable("profile") { }
+
+            composable("success") {
+                SuccessScreen(onBackToHome = { navController.popBackStack("home", inclusive = false) })
+            }
         }
     }
 }
