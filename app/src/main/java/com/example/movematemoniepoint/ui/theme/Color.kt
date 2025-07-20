@@ -12,5 +12,7 @@ val Pink40 = Color(0xFF7D5260)
 
 val PurplePrimary = Color(0xFF543B9B)
 val BackgroundColor = Color(0xFFF4F2F7)
+val White = Color(0xFFFFFFFF)
+val Orange = Color(0xFFE67E22)
 val BottomBarBackground = Color(0xFFFEFEFE)
 val GreenHighlight = Color(0xFF2ECC71)
