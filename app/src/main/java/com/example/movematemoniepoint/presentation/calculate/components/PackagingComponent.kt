@@ -29,6 +29,7 @@ import androidx.compose.ui.graphics.Color.Companion.Gray
 import androidx.compose.ui.graphics.Color.Companion.LightGray
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -39,15 +40,14 @@ import com.example.movematemoniepoint.ui.theme.White
 @Composable
 fun PackagingSection(
     modifier: Modifier = Modifier,
-    selectedPackaging: String = "Box"
 ) {
     Column(modifier = modifier) {
         Text(
-            text = "Packaging",
+            text = stringResource(R.string.packaging),
             style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.SemiBold),
         )
         Text(
-            text = "What are you sending?",
+            text = stringResource(R.string.what_are_you_sending),
             style = MaterialTheme.typography.bodySmall,
             color = Color.Gray,
             fontWeight = FontWeight.Light,
@@ -73,7 +73,7 @@ fun PackagingSection(
             ) {
                 Image(
                     painter = painterResource(id = R.drawable.ic_box),
-                    contentDescription = "Box",
+                    contentDescription = stringResource(R.string.box),
                     modifier = Modifier.size(20.dp)
                 )
 
@@ -89,7 +89,7 @@ fun PackagingSection(
                 Spacer(modifier = Modifier.width(12.dp))
 
                 Text(
-                    text = "Box",
+                    text = stringResource(R.string.box),
                     style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.SemiBold),
                     color = Color(0xFF111827),
                     modifier = Modifier.weight(1f)
@@ -97,7 +97,7 @@ fun PackagingSection(
 
                 androidx.compose.material3.Icon(
                     painter = painterResource(R.drawable.ic_right_arrow),
-                    contentDescription = "Dropdown",
+                    contentDescription = stringResource(R.string.txt_dropdown),
                     modifier = modifier.size(24.dp),
                     tint = Gray
                 )

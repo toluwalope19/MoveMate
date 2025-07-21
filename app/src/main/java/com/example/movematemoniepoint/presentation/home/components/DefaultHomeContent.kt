@@ -1,4 +1,4 @@
-package com.example.movematemoniepoint.presentation.components
+package com.example.movematemoniepoint.presentation.home.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.PaddingValues

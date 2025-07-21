@@ -1,4 +1,4 @@
-package com.example.movematemoniepoint.presentation.components
+package com.example.movematemoniepoint.presentation.home.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -45,7 +45,7 @@ fun DeliveryResultItem(
             ) {
                 Icon(
                     painter = painterResource(id = R.drawable.ic_package),
-                    contentDescription = "Package",
+                    contentDescription = null,
                     tint = Color.White,
                     modifier = Modifier.size(24.dp)
                 )

@@ -22,9 +22,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Color.Companion.White
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
+import com.example.movematemoniepoint.R
 import com.example.movematemoniepoint.presentation.calculate.components.CalculateButton
 import com.example.movematemoniepoint.presentation.calculate.components.CategoriesSection
 import com.example.movematemoniepoint.presentation.calculate.components.DestinationSection
@@ -43,7 +45,7 @@ fun CalculateScreen(
     Scaffold(
         topBar = {
             CenterAlignedTopAppBar(
-                title = { Text("Calculate", color = Color.White) },
+                title = { Text(stringResource(R.string.calculate), color = Color.White) },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
                         Icon(Icons.Default.ArrowBack, contentDescription = "Back", tint = White)

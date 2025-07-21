@@ -51,10 +51,6 @@ class DeliveryViewModel @Inject constructor() : ViewModel() {
         _vehicles.value = VehicleRepository.getAvailableVehicles()
     }
 
-    fun getDeliveriesByStatus(status: DeliveryStatus?): List<Delivery> {
-        return if (status == null) _deliveries.value
-        else _deliveries.value.filter { it.status == status }
-    }
 
     fun onSearchTextChanged(newText: String) {
         _searchText.value = newText

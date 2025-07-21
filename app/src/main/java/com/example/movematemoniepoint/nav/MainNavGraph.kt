@@ -11,7 +11,7 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.movematemoniepoint.presentation.calculate.CalculateScreen
 import com.example.movematemoniepoint.presentation.calculate.SuccessScreen
-import com.example.movematemoniepoint.presentation.components.BottomNav
+import com.example.movematemoniepoint.presentation.home.components.BottomNav
 import com.example.movematemoniepoint.presentation.home.HomeScreen
 import com.example.movematemoniepoint.presentation.shipment.ShipmentScreen
 

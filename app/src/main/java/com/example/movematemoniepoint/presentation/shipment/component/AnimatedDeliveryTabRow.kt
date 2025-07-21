@@ -11,12 +11,12 @@ import com.example.movematemoniepoint.domain.DeliveryStatus
 
 @Composable
 fun AnimatedDeliveryTabRow(
-    visible: Boolean, // Control visibility directly from the parent
+    visible: Boolean,
     selectedTab: DeliveryStatus?,
     onTabSelected: (DeliveryStatus?) -> Unit,
     counts: Map<DeliveryStatus?, Int>
 ) {
-    // The animation is now tied to the 'visible' state changing from false to true.
+
     AnimatedVisibility(
         visible = visible,
         enter = slideInHorizontally(
@@ -25,7 +25,7 @@ fun AnimatedDeliveryTabRow(
             animationSpec = tween(durationMillis = 700)
         ) + fadeIn(animationSpec = tween(durationMillis = 700))
     ) {
-        // The DeliveryTabRow is now a direct child of the animation.
+
         DeliveryTabRow(
             selectedTab = selectedTab,
             onTabSelected = onTabSelected,

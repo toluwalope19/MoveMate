@@ -26,7 +26,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.movematemoniepoint.domain.Delivery
 import com.example.movematemoniepoint.domain.DeliveryStatus
-import com.example.movematemoniepoint.presentation.components.DeliveryResultItem
 import com.example.movematemoniepoint.ui.theme.MoveMateMoniepointTheme
 import kotlinx.coroutines.delay
 

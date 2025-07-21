@@ -1,3 +1,33 @@
 <resources>
     <string name="app_name">MoveMateMoniepoint</string>
+    <string name="calculate">Calculate</string>
+    <string name="what_are_you_sending">What are you sending?</string>
+    <string name="txt_selected">Selected</string>
+    <string name="destination">Destination</string>
+    <string name="sender_location">Sender location</string>
+    <string name="receiver_location">Receiver location</string>
+    <string name="approx_weight">Approx weight</string>
+    <string name="packaging">Packaging</string>
+    <string name="box">Box</string>
+    <string name="txt_dropdown">Dropdown</string>
+    <string name="total_estimated_amount">Total Estimated Amount</string>
+    <string name="this_amount_is_estimated">This amount is estimated. It may vary if you change your location or weight</string>
+    <string name="back_to_home">Back to home</string>
+    <string name="available_vehicles">Available vehicles</string>
+    <string name="your_location">Your location</string>
+    <string name="wertheimer_illinois">Wertheimer, Illinois</string>
+    <string name="notifications">Notifications</string>
+    <string name="enter_the_receipt_number">Enter the receipt number ...</string>
+    <string name="txt_search_icon">Search Icon</string>
+    <string name="txt_receipt">Receipt</string>
+    <string name="tracking">Tracking</string>
+    <string name="shipment_number">Shipment Number</string>
+    <string name="sender">Sender</string>
+    <string name="time">Time</string>
+    <string name="receiver">Receiver</string>
+    <string name="status">Status</string>
+    <string name="add_stop">+ Add Stop</string>
+    <string name="arriving_today">Arriving today!</string>
+    <string name="your_delivery_from_is_arriving_today">Your delivery, %1$s from %2$s, is arriving today!</string>
+    <string name="usd">$%1$s USD</string>
 </resources>

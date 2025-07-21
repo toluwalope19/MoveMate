@@ -1,4 +1,4 @@
-package com.example.movematemoniepoint.presentation.components
+package com.example.movematemoniepoint.presentation.home.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -26,6 +26,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
@@ -43,7 +44,7 @@ fun TrackingInfoSection(delivery: Delivery, modifier: Modifier = Modifier) {
 
         Spacer(modifier = Modifier.height(16.dp))
         Text(
-            "Tracking",
+            stringResource(R.string.tracking),
             style = MaterialTheme.typography.titleLarge,
             color = Color.Black,
             modifier = Modifier.padding(bottom = 8.dp)
@@ -67,7 +68,7 @@ fun TrackingInfoSection(delivery: Delivery, modifier: Modifier = Modifier) {
                 ) {
                     Column {
                         Text(
-                            "Shipment Number",
+                            stringResource(R.string.shipment_number),
                             style = MaterialTheme.typography.bodyMedium,
                             color = Color.Gray
                         )
@@ -112,7 +113,7 @@ fun TrackingInfoSection(delivery: Delivery, modifier: Modifier = Modifier) {
                             )
                             Spacer(modifier = Modifier.width(1.dp))
                             Column {
-                                Text("Sender", style = MaterialTheme.typography.labelMedium, color = Color.Gray)
+                                Text(stringResource(R.string.sender), style = MaterialTheme.typography.labelMedium, color = Color.Gray)
                                 Spacer(modifier = Modifier.height(2.dp))
                                 Text(delivery.addressFrom, style = MaterialTheme.typography.bodyMedium, color = Color.Black, fontWeight = FontWeight.Normal)
                             }
@@ -120,7 +121,7 @@ fun TrackingInfoSection(delivery: Delivery, modifier: Modifier = Modifier) {
 
                         // Time
                         Column(modifier = Modifier.weight(1f)) {
-                            Text("Time", style = MaterialTheme.typography.labelMedium, color = Color.Gray)
+                            Text(stringResource(R.string.time), style = MaterialTheme.typography.labelMedium, color = Color.Gray)
                             Spacer(modifier = Modifier.height(2.dp))
                             Row(verticalAlignment = Alignment.CenterVertically) {
                                 Box(
@@ -160,7 +161,7 @@ fun TrackingInfoSection(delivery: Delivery, modifier: Modifier = Modifier) {
                             )
                             Spacer(modifier = Modifier.width(1.dp))
                             Column {
-                                Text("Receiver", style = MaterialTheme.typography.labelMedium, color = Color.Gray)
+                                Text(stringResource(R.string.receiver), style = MaterialTheme.typography.labelMedium, color = Color.Gray)
                                 Spacer(modifier = Modifier.height(2.dp))
                                 Text(
                                     delivery.addressTo,
@@ -175,7 +176,7 @@ fun TrackingInfoSection(delivery: Delivery, modifier: Modifier = Modifier) {
 
                         // Status (left aligned)
                         Column(modifier = Modifier.weight(1f)) {
-                            Text("Status", style = MaterialTheme.typography.labelMedium, color = Color.Gray)
+                            Text(stringResource(R.string.status), style = MaterialTheme.typography.labelMedium, color = Color.Gray)
                             Spacer(modifier = Modifier.height(2.dp))
                             Text(
                                 delivery.statusTitle ?: "",
@@ -188,7 +189,7 @@ fun TrackingInfoSection(delivery: Delivery, modifier: Modifier = Modifier) {
 
                     HorizontalDivider(color = Color(0xFFF2F2F2), thickness = 1.dp)
 
-                    // Centered "+ Add Stop"
+                    //"+ Add Stop"
                     Box(
                         modifier = Modifier
                             .fillMaxWidth()
@@ -196,7 +197,7 @@ fun TrackingInfoSection(delivery: Delivery, modifier: Modifier = Modifier) {
                         contentAlignment = Alignment.Center
                     ) {
                         Text(
-                            text = "+ Add Stop",
+                            text = stringResource(R.string.add_stop),
                             style = MaterialTheme.typography.bodyMedium,
                             color = Color(0xFFE67E22),
                             fontWeight = FontWeight.SemiBold

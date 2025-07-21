@@ -22,7 +22,9 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import com.example.movematemoniepoint.R
 
 @Composable
 fun CategoryChip(
@@ -56,7 +58,7 @@ fun CategoryChip(
             ) {
                 Icon(
                     imageVector = Icons.Default.Check,
-                    contentDescription = "Selected",
+                    contentDescription = stringResource(R.string.txt_selected),
                     tint = Color.White,
                     modifier = Modifier
                         .size(16.dp)

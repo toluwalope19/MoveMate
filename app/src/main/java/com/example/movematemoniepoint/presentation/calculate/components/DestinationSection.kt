@@ -26,6 +26,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -42,7 +43,7 @@ fun DestinationSection(
 ) {
     Column {
         Text(
-            text = "Destination",
+            text = stringResource(R.string.destination),
             style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.SemiBold),
         )
 
@@ -58,23 +59,27 @@ fun DestinationSection(
                 DestinationInputField(
                     value = state.sender,
                     onValueChange = { onValueChange(DestinationInputEvent.OnSenderChanged(it)) },
-                    hint = "Sender location",
+                    hint = stringResource(R.string.sender_location),
                     leadingIcon = painterResource(id = R.drawable.ic_sender_location),
-                    modifier = Modifier.fillMaxWidth().padding(bottom = 12.dp)
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(bottom = 12.dp)
                 )
 
                 DestinationInputField(
                     value = state.receiver,
                     onValueChange = { onValueChange(DestinationInputEvent.OnReceiverChanged(it)) },
-                    hint = "Receiver location",
+                    hint = stringResource(R.string.receiver_location),
                     leadingIcon = painterResource(id = R.drawable.ic_receiver_location),
-                    modifier = Modifier.fillMaxWidth().padding(bottom = 12.dp)
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(bottom = 12.dp)
                 )
 
                 DestinationInputField(
                     value = state.weight,
                     onValueChange = { onValueChange(DestinationInputEvent.OnWeightChanged(it)) },
-                    hint = "Approx weight",
+                    hint = stringResource(R.string.approx_weight),
                     leadingIcon = painterResource(id = R.drawable.ic_weight),
                     modifier = Modifier.fillMaxWidth()
                 )

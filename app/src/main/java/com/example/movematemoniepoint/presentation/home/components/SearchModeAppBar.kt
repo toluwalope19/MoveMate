@@ -1,4 +1,4 @@
-package com.example.movematemoniepoint.presentation.components
+package com.example.movematemoniepoint.presentation.home.components
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.tween
@@ -29,6 +29,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.movematemoniepoint.R
@@ -57,7 +58,7 @@ fun SearchModeAppBar(
             IconButton(onClick = onBackClicked) {
                 Icon(
                     painter = painterResource(R.drawable.ic_back_arrow),
-                    contentDescription = "Back",
+                    contentDescription = null,
                     tint = Color.White,
                     modifier = Modifier.size(36.dp)
                 )
@@ -71,7 +72,7 @@ fun SearchModeAppBar(
             value = searchText,
             onValueChange = onSearchTextChange,
             placeholder = { Text(
-                text = "Enter the receipt number ...",
+                text = stringResource(R.string.enter_the_receipt_number),
                 style = MaterialTheme.typography.bodyMedium,
                 modifier = Modifier.padding(bottom = 2.dp)
             ) },
@@ -90,7 +91,7 @@ fun SearchModeAppBar(
             leadingIcon = {
                 Icon(
                     imageVector = Icons.Default.Search,
-                    contentDescription = "Search Icon",
+                    contentDescription = stringResource(R.string.txt_search_icon),
                     tint = PurplePrimary,
                     modifier = Modifier.padding(start = 8.dp)
                 )
@@ -105,7 +106,7 @@ fun SearchModeAppBar(
                 ) {
                     Icon(
                         painter = painterResource(id = R.drawable.ic_scanner),
-                        contentDescription = "Receipt",
+                        contentDescription = stringResource(R.string.txt_receipt),
                         tint = Color.White,
                         modifier = Modifier.size(16.dp)
                     )

@@ -32,12 +32,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.movematemoniepoint.R
 import com.example.movematemoniepoint.presentation.calculate.components.CalculateButton
+import com.example.movematemoniepoint.ui.theme.GreenAmount
 import com.example.movematemoniepoint.ui.theme.MoveMateMoniepointTheme
 
 @Composable
@@ -81,7 +83,7 @@ fun SuccessScreen(onBackToHome: () -> Unit) {
             ) {
                 Image(
                     painter = painterResource(R.drawable.movemate_logo),
-                    contentDescription = "MoveMate Logo",
+                    contentDescription = null,
                     modifier = Modifier.size(150.dp)
                 )
 
@@ -89,7 +91,7 @@ fun SuccessScreen(onBackToHome: () -> Unit) {
 
                 Image(
                     painter = painterResource(R.drawable.ic_pack),
-                    contentDescription = "Box"
+                    contentDescription = stringResource(R.string.box)
                 )
 
                 Spacer(modifier = Modifier.height(24.dp))
@@ -102,7 +104,7 @@ fun SuccessScreen(onBackToHome: () -> Unit) {
                 ) {
                     Column(horizontalAlignment = Alignment.CenterHorizontally) {
                         Text(
-                            text = "Total Estimated Amount",
+                            text = stringResource(R.string.total_estimated_amount),
                             style = MaterialTheme.typography.headlineSmall,
                             fontWeight = FontWeight.SemiBold,
                             textAlign = TextAlign.Center
@@ -118,14 +120,14 @@ fun SuccessScreen(onBackToHome: () -> Unit) {
                             Text(
                                 text = "$$displayedAmount",
                                 style = MaterialTheme.typography.titleLarge.copy(
-                                    color = Color(0xFF00B386)
+                                    color = GreenAmount
                                 )
                             )
                             Spacer(modifier = Modifier.width(3.dp))
                             Text(
                                 text = "USD",
                                 style = MaterialTheme.typography.titleMedium.copy(
-                                    color = Color(0xFF00B386),
+                                    color = GreenAmount,
                                     fontWeight = FontWeight.Normal
                                 )
                             )
@@ -134,7 +136,7 @@ fun SuccessScreen(onBackToHome: () -> Unit) {
                         Spacer(modifier = Modifier.height(8.dp))
 
                         Text(
-                            text = "This amount is estimated. It may vary if you change your location or weight",
+                            text = stringResource(R.string.this_amount_is_estimated),
                             style = MaterialTheme.typography.bodyMedium,
                             textAlign = TextAlign.Center,
                             fontWeight = FontWeight.Normal,
@@ -150,7 +152,7 @@ fun SuccessScreen(onBackToHome: () -> Unit) {
                         .fillMaxWidth()
                         .padding(bottom = 16.dp),
                     onClick = { onBackToHome() },
-                    text = "Back to home"
+                    text = stringResource(R.string.back_to_home)
                 )
             }
         }

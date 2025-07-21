@@ -22,6 +22,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.TextUnit
@@ -56,13 +57,17 @@ fun DeliveryItem(delivery: Delivery, modifier: Modifier = Modifier) {
                 Spacer(modifier = Modifier.height(8.dp))
 
                 Text(
-                    text = "Arriving today!",
+                    text = stringResource(R.string.arriving_today),
                     style = MaterialTheme.typography.titleMedium,
                     modifier = Modifier.padding(bottom = 8.dp)
                 )
 
                 Text(
-                    text = "Your delivery, ${delivery.shipmentId} from ${delivery.addressFrom}, is arriving today!",
+                    text = stringResource(
+                        R.string.your_delivery_from_is_arriving_today,
+                        delivery.shipmentId,
+                        delivery.addressFrom
+                    ),
                     style = MaterialTheme.typography.bodyMedium,
                     color = Color.Gray,
                     fontWeight = FontWeight.SemiBold,
@@ -74,7 +79,7 @@ fun DeliveryItem(delivery: Delivery, modifier: Modifier = Modifier) {
 
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     Text(
-                        text = "$${delivery.amount} USD",
+                        text = stringResource(R.string.usd, delivery.amount),
                         style = MaterialTheme.typography.bodyMedium,
                         fontWeight = FontWeight.SemiBold,
                         color = PurplePrimary

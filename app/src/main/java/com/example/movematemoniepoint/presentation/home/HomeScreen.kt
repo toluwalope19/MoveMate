@@ -26,11 +26,11 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import com.example.movematemoniepoint.presentation.components.HomeAppBar
-import com.example.movematemoniepoint.presentation.components.SearchModeAppBar
+import com.example.movematemoniepoint.presentation.home.components.SearchModeAppBar
 import com.example.movematemoniepoint.ui.theme.PurplePrimary
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.example.movematemoniepoint.presentation.components.DefaultHomeContent
+import com.example.movematemoniepoint.presentation.home.components.DefaultHomeContent
 import com.example.movematemoniepoint.presentation.home.components.DeliverySearchResults
 
 @OptIn(ExperimentalAnimationApi::class)
