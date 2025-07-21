@@ -29,6 +29,13 @@ import com.example.movematemoniepoint.domain.DeliveryStatus
 import com.example.movematemoniepoint.ui.theme.MoveMateMoniepointTheme
 import kotlinx.coroutines.delay
 
+/**
+ * A composable function that displays a list of delivery search results.
+ * Each item in the list is animated in with a staggered delay.
+ *
+ * @param deliveries The list of [Delivery] objects to display.
+ * @param modifier The modifier to be applied to the LazyColumn.
+ */
 @Composable
 fun DeliverySearchResults(deliveries: List<Delivery>, modifier: Modifier = Modifier) {
 
@@ -67,7 +74,6 @@ fun DeliverySearchResults(deliveries: List<Delivery>, modifier: Modifier = Modif
         }
     }
 }
-
 
 
 @Preview(showBackground = true)

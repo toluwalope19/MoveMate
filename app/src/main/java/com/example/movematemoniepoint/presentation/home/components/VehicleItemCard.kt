@@ -33,6 +33,14 @@ import com.example.movematemoniepoint.domain.AvailableVehicle
 import com.example.movematemoniepoint.ui.theme.MoveMateMoniepointTheme
 import kotlinx.coroutines.delay
 
+/**
+ * A composable function that displays a card for a vehicle.
+ * The card animates in from the right side of the screen.
+ * The image inside the card also animates in from the right, with a slight delay.
+ *
+ * @param vehicle The vehicle to display.
+ * @param modifier The modifier to apply to the card.
+ */
 @Composable
 fun VehicleItemCard(vehicle: AvailableVehicle, modifier: Modifier = Modifier) {
     val cardOffsetX = remember { Animatable(300f) }
@@ -87,7 +95,6 @@ fun VehicleItemCard(vehicle: AvailableVehicle, modifier: Modifier = Modifier) {
         }
     }
 }
-
 
 
 @Preview(showBackground = true)

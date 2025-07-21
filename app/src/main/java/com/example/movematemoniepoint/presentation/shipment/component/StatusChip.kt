@@ -23,6 +23,11 @@ import androidx.compose.ui.unit.dp
 import com.example.movematemoniepoint.R
 import com.example.movematemoniepoint.domain.DeliveryStatus
 
+/**
+ * A composable function that displays a status chip.
+ *
+ * @param status The delivery status to display.
+ */
 @Composable
 fun StatusChip(status: DeliveryStatus) {
 

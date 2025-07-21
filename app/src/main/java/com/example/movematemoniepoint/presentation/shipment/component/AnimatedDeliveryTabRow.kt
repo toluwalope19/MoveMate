@@ -8,7 +8,16 @@ import androidx.compose.runtime.Composable
 import com.example.movematemoniepoint.domain.DeliveryStatus
 
 
-
+/**
+ * A Composable function that displays a [DeliveryTabRow] with an animation.
+ *
+ * The [DeliveryTabRow] will slide in from the right and fade in when it becomes visible.
+ *
+ * @param visible Whether the [DeliveryTabRow] should be visible.
+ * @param selectedTab The currently selected [DeliveryStatus].
+ * @param onTabSelected A callback that is invoked when a tab is selected.
+ * @param counts A map of [DeliveryStatus] to the number of items in that status.
+ */
 @Composable
 fun AnimatedDeliveryTabRow(
     visible: Boolean,

@@ -26,6 +26,16 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.example.movematemoniepoint.R
 
+/**
+ * A composable function that displays a category chip.
+ *
+ * The chip displays a label and an optional check icon when selected.
+ * The background and text color of the chip animate based on the selection state.
+ *
+ * @param label The text to display on the chip.
+ * @param isSelected Whether the chip is currently selected.
+ * @param onClick A callback function that is invoked when the chip is clicked.
+ */
 @Composable
 fun CategoryChip(
     label: String,

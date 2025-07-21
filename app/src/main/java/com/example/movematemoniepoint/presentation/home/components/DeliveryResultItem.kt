@@ -27,6 +27,13 @@ import com.example.movematemoniepoint.domain.Delivery
 import com.example.movematemoniepoint.ui.theme.PurplePrimary
 
 
+/**
+ * Composable function that displays a single delivery item.
+ *
+ * @param delivery The [Delivery] object containing the data to display.
+ * @param showDivider A boolean indicating whether to show a divider below the item.
+ * @param modifier The [Modifier] to be applied to the composable.
+ */
 @Composable
 fun DeliveryResultItem(
     delivery: Delivery,

@@ -5,7 +5,6 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
@@ -29,9 +28,16 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.movematemoniepoint.domain.DeliveryStatus
-import com.example.movematemoniepoint.ui.theme.Orange
 import com.example.movematemoniepoint.ui.theme.PurplePrimary
 
+/**
+ * Composable function that displays a scrollable tab row for filtering deliveries by status.
+ *
+ * @param selectedTab The currently selected delivery status. Can be null if "All" is selected.
+ * @param onTabSelected Callback function triggered when a tab is selected.
+ * @param counts A map containing the count of deliveries for each status.
+ *               The key is the [DeliveryStatus] (or null for "All"), and the value is the count.
+ */
 @Composable
 fun DeliveryTabRow(
     selectedTab: DeliveryStatus?,
@@ -82,7 +88,7 @@ fun DeliveryTabRow(
                         text = label,
                         color = if (isSelected) selectedColor else unselectedTextColor,
                         fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
-                        fontSize = 18.sp
+                        fontSize = 16.sp
                     )
 
                     Spacer(modifier = Modifier.width(4.dp))

@@ -6,7 +6,6 @@ import com.example.movematemoniepoint.data.DeliveryRepository
 import com.example.movematemoniepoint.data.VehicleRepository
 import com.example.movematemoniepoint.domain.AvailableVehicle
 import com.example.movematemoniepoint.domain.Delivery
-import com.example.movematemoniepoint.domain.DeliveryStatus
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted

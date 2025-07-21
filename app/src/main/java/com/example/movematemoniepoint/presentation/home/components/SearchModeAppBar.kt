@@ -36,6 +36,16 @@ import com.example.movematemoniepoint.R
 import com.example.movematemoniepoint.ui.theme.MoveMateMoniepointTheme
 import com.example.movematemoniepoint.ui.theme.PurplePrimary
 
+/**
+ * Composable function that displays an app bar for search mode.
+ *
+ * This app bar includes a back button, a text field for entering search queries,
+ * and a scanner icon.
+ *
+ * @param searchText The current text in the search field.
+ * @param onSearchTextChange Callback invoked when the search text changes.
+ * @param onBackClicked Callback invoked when the back button is clicked.
+ */
 @Composable
 fun SearchModeAppBar(
     searchText: String,
@@ -71,11 +81,13 @@ fun SearchModeAppBar(
         TextField(
             value = searchText,
             onValueChange = onSearchTextChange,
-            placeholder = { Text(
-                text = stringResource(R.string.enter_the_receipt_number),
-                style = MaterialTheme.typography.bodyMedium,
-                modifier = Modifier.padding(bottom = 2.dp)
-            ) },
+            placeholder = {
+                Text(
+                    text = stringResource(R.string.enter_the_receipt_number),
+                    style = MaterialTheme.typography.bodyMedium,
+                    modifier = Modifier.padding(bottom = 2.dp)
+                )
+            },
             singleLine = true,
             shape = RoundedCornerShape(24.dp),
             modifier = Modifier

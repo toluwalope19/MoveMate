@@ -1,9 +1,7 @@
 package com.example.movematemoniepoint.presentation.shipment.component
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -25,14 +23,20 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import com.example.movematemoniepoint.R
 import com.example.movematemoniepoint.domain.Delivery
 import com.example.movematemoniepoint.domain.DeliveryStatus
 import com.example.movematemoniepoint.ui.theme.PurplePrimary
-import com.example.movematemoniepoint.ui.theme.White
 
+/**
+ * Composable function that displays a single delivery item in a card format.
+ * It shows information such as delivery status, arrival information,
+ * shipment ID, origin address, amount, and order date.
+ *
+ * @param delivery The [Delivery] object containing the details to be displayed.
+ * @param modifier The [Modifier] to be applied to the card.
+ */
 @Composable
 fun DeliveryItem(delivery: Delivery, modifier: Modifier = Modifier) {
     Card(

@@ -38,6 +38,13 @@ import com.example.movematemoniepoint.ui.theme.GreenHighlight
 import com.example.movematemoniepoint.ui.theme.MoveMateMoniepointTheme
 
 
+/**
+ * Composable function that displays the tracking information for a delivery.
+ * It shows details like shipment number, sender, receiver, time, and status.
+ *
+ * @param delivery The [Delivery] object containing the tracking information.
+ * @param modifier Optional [Modifier] to be applied to the root Column.
+ */
 @Composable
 fun TrackingInfoSection(delivery: Delivery, modifier: Modifier = Modifier) {
     Column(modifier = modifier.padding(horizontal = 16.dp)) {
@@ -113,15 +120,28 @@ fun TrackingInfoSection(delivery: Delivery, modifier: Modifier = Modifier) {
                             )
                             Spacer(modifier = Modifier.width(1.dp))
                             Column {
-                                Text(stringResource(R.string.sender), style = MaterialTheme.typography.labelMedium, color = Color.Gray)
+                                Text(
+                                    stringResource(R.string.sender),
+                                    style = MaterialTheme.typography.labelMedium,
+                                    color = Color.Gray
+                                )
                                 Spacer(modifier = Modifier.height(2.dp))
-                                Text(delivery.addressFrom, style = MaterialTheme.typography.bodyMedium, color = Color.Black, fontWeight = FontWeight.Normal)
+                                Text(
+                                    delivery.addressFrom,
+                                    style = MaterialTheme.typography.bodyMedium,
+                                    color = Color.Black,
+                                    fontWeight = FontWeight.Normal
+                                )
                             }
                         }
 
                         // Time
                         Column(modifier = Modifier.weight(1f)) {
-                            Text(stringResource(R.string.time), style = MaterialTheme.typography.labelMedium, color = Color.Gray)
+                            Text(
+                                stringResource(R.string.time),
+                                style = MaterialTheme.typography.labelMedium,
+                                color = Color.Gray
+                            )
                             Spacer(modifier = Modifier.height(2.dp))
                             Row(verticalAlignment = Alignment.CenterVertically) {
                                 Box(
@@ -161,7 +181,11 @@ fun TrackingInfoSection(delivery: Delivery, modifier: Modifier = Modifier) {
                             )
                             Spacer(modifier = Modifier.width(1.dp))
                             Column {
-                                Text(stringResource(R.string.receiver), style = MaterialTheme.typography.labelMedium, color = Color.Gray)
+                                Text(
+                                    stringResource(R.string.receiver),
+                                    style = MaterialTheme.typography.labelMedium,
+                                    color = Color.Gray
+                                )
                                 Spacer(modifier = Modifier.height(2.dp))
                                 Text(
                                     delivery.addressTo,
@@ -176,7 +200,11 @@ fun TrackingInfoSection(delivery: Delivery, modifier: Modifier = Modifier) {
 
                         // Status (left aligned)
                         Column(modifier = Modifier.weight(1f)) {
-                            Text(stringResource(R.string.status), style = MaterialTheme.typography.labelMedium, color = Color.Gray)
+                            Text(
+                                stringResource(R.string.status),
+                                style = MaterialTheme.typography.labelMedium,
+                                color = Color.Gray
+                            )
                             Spacer(modifier = Modifier.height(2.dp))
                             Text(
                                 delivery.statusTitle ?: "",
@@ -208,7 +236,6 @@ fun TrackingInfoSection(delivery: Delivery, modifier: Modifier = Modifier) {
         }
     }
 }
-
 
 
 @Composable

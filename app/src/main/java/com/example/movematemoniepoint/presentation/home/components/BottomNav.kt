@@ -31,6 +31,18 @@ import com.example.movematemoniepoint.R
 import com.example.movematemoniepoint.ui.theme.BottomBarBackground
 import com.example.movematemoniepoint.ui.theme.PurplePrimary
 
+/**
+ * A Composable function that creates a bottom navigation bar with a dynamic indicator.
+ *
+ * This function displays a list of navigation items (Home, Calculate, Shipment, Profile)
+ * at the bottom of the screen. It highlights the currently selected item and provides
+ * a visual indicator that animates to the selected tab's position.
+ *
+ * The navigation behavior ensures that when a new item is selected, the back stack is
+ * popped up to the start destination of the graph, state is saved, the destination is
+ * launched as a single top, and state is restored.
+ *
+ */
 @Composable
 fun BottomNav(navController: NavHostController) {
     val currentBackStack by navController.currentBackStackEntryAsState()

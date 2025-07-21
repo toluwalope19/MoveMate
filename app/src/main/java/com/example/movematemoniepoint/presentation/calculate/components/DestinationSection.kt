@@ -18,8 +18,6 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextFieldDefaults
-import androidx.compose.material3.OutlinedTextField
-
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -36,6 +34,14 @@ import com.example.movematemoniepoint.presentation.calculate.DestinationInputSta
 import com.example.movematemoniepoint.ui.theme.MoveMateMoniepointTheme
 import com.example.movematemoniepoint.ui.theme.PurplePrimary
 
+/**
+ * A composable function that displays a section for inputting destination details.
+ *
+ * This section includes input fields for sender location, receiver location, and approximate weight.
+ *
+ * @param state The current state of the destination input fields.
+ * @param onValueChange A callback function that is invoked when the value of an input field changes.
+ */
 @Composable
 fun DestinationSection(
     state: DestinationInputState,
@@ -147,9 +153,7 @@ fun DestinationInputField(
             disabledIndicatorColor = Color.Transparent,
             unfocusedLabelColor = Color.Gray,
             focusedLabelColor = Color.Gray
-        )
-
-        ,
+        ),
         singleLine = true
     )
 }

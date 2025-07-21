@@ -23,6 +23,19 @@ import androidx.compose.ui.unit.dp
 import com.example.movematemoniepoint.R
 
 
+/**
+ * Composable function that displays a section for selecting categories.
+ *
+ * This section includes a title, a descriptive subtitle, and a flow layout of chips
+ * representing the available categories. Users can tap on these chips to select or
+ * deselect categories.
+ *
+ * @param allCategories A list of strings representing all available categories.
+ * @param selectedCategories A list of strings representing the currently selected categories.
+ * @param onCategorySelected A callback function that is invoked when a category chip is clicked.
+ *                           It receives the clicked category string as an argument.
+ * @param modifier An optional [Modifier] to be applied to the root Column of this composable.
+ */
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun CategoriesSection(

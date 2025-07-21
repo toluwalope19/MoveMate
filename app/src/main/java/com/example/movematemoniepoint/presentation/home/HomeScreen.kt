@@ -33,6 +33,14 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.example.movematemoniepoint.presentation.home.components.DefaultHomeContent
 import com.example.movematemoniepoint.presentation.home.components.DeliverySearchResults
 
+/**
+ * Composable function for the Home Screen.
+ *
+ * This screen displays either the default home content or search results based on the search mode.
+ * It uses animations for transitions between states and for the appearance of the app bar.
+ *
+ * @param viewModel The [DeliveryViewModel] used to manage the state and logic for this screen.
+ */
 @OptIn(ExperimentalAnimationApi::class)
 @Composable
 fun HomeScreen(viewModel: DeliveryViewModel = hiltViewModel()) {

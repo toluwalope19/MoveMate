@@ -42,6 +42,15 @@ import com.example.movematemoniepoint.presentation.calculate.components.Calculat
 import com.example.movematemoniepoint.ui.theme.GreenAmount
 import com.example.movematemoniepoint.ui.theme.MoveMateMoniepointTheme
 
+/**
+ * Composable function that displays a success screen after a calculation.
+ *
+ * This screen features an animation for the estimated amount and a button to navigate back to the home screen.
+ * It uses [AnimatedVisibility] to animate the appearance of the content.
+ * The estimated amount is animated from 0 to the target amount.
+ *
+ * @param onBackToHome A lambda function to be invoked when the "Back to Home" button is clicked.
+ */
 @Composable
 fun SuccessScreen(onBackToHome: () -> Unit) {
 
@@ -158,8 +167,6 @@ fun SuccessScreen(onBackToHome: () -> Unit) {
         }
     }
 }
-
-
 
 
 @Preview(showBackground = true)

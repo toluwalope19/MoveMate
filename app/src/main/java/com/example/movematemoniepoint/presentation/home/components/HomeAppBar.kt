@@ -39,6 +39,14 @@ import com.example.movematemoniepoint.R
 import com.example.movematemoniepoint.ui.theme.MoveMateMoniepointTheme
 import com.example.movematemoniepoint.ui.theme.PurplePrimary
 
+/**
+ * Composable function that displays the app bar for the home screen.
+ * It includes user profile information, location, notification icon, and a search bar.
+ *
+ * @param searchText The current text in the search bar.
+ * @param onSearchTextChange Callback function invoked when the search text changes.
+ * @param onEnterSearchMode Callback function invoked when the user interacts with the search bar to enter search mode.
+ */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeAppBar(
@@ -99,7 +107,10 @@ fun HomeAppBar(
                     )
                 }
 
-                Row(verticalAlignment = Alignment.CenterVertically,modifier = Modifier.padding(top = 2.dp)) {
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier.padding(top = 2.dp)
+                ) {
                     Text(
                         text = stringResource(R.string.wertheimer_illinois),
                         color = Color.White,
@@ -186,7 +197,6 @@ fun HomeAppBar(
         )
     }
 }
-
 
 
 @Preview(showBackground = true)

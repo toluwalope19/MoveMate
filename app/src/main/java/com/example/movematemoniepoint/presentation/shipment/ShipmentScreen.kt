@@ -13,7 +13,6 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -28,7 +27,6 @@ import com.example.movematemoniepoint.domain.DeliveryStatus
 import com.example.movematemoniepoint.presentation.shipment.component.AnimatedDeliveryTabRow
 import com.example.movematemoniepoint.presentation.shipment.component.ShipmentListSection
 import com.example.movematemoniepoint.presentation.shipment.component.ShipmentTopAppBar
-import kotlinx.coroutines.delay
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -70,7 +68,6 @@ fun ShipmentScreen(viewModel: ShipmentViewModel = hiltViewModel(), onBack: () ->
                 onTabSelected = { newStatus ->
                     if (selectedStatus != newStatus) {
                         selectedStatus = newStatus
-                        // No need to change animateListInitially here; it's a one-time flag.
                     }
                 },
                 counts = counts

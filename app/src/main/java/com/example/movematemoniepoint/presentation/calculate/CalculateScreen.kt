@@ -33,6 +33,11 @@ import com.example.movematemoniepoint.presentation.calculate.components.Destinat
 import com.example.movematemoniepoint.presentation.calculate.components.PackagingSection
 import com.example.movematemoniepoint.ui.theme.PurplePrimary
 
+/**
+ * Composable function that represents the "Calculate" screen.
+ * This screen allows users to input destination details, packaging information,
+ * and select categories to calculate something (presumably a cost or estimate).
+ */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CalculateScreen(

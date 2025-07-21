@@ -19,6 +19,12 @@ import com.example.movematemoniepoint.R
 import com.example.movematemoniepoint.domain.AvailableVehicle
 import com.example.movematemoniepoint.ui.theme.MoveMateMoniepointTheme
 
+/**
+ * A composable function that displays a section for available vehicles.
+ *
+ * @param vehicles A list of [AvailableVehicle] objects to display.
+ * @param modifier A [Modifier] to apply to the composable.
+ */
 @Composable
 fun AvailableVehiclesSection(
     vehicles: List<AvailableVehicle>,
@@ -45,15 +51,13 @@ fun AvailableVehiclesSection(
 }
 
 
-
-
 @Preview(showBackground = true)
 @Composable
 fun AvailableVehiclesSectionPreview() {
     val vehicles = listOf(
         AvailableVehicle("Ocean freight", "International", R.drawable.ic_trailer),
-        AvailableVehicle("Cargo freight", "Reliable",R.drawable.ic_trailer),
-        AvailableVehicle("Air freight", "International",R.drawable.ic_trailer)
+        AvailableVehicle("Cargo freight", "Reliable", R.drawable.ic_trailer),
+        AvailableVehicle("Air freight", "International", R.drawable.ic_trailer)
     )
 
     MoveMateMoniepointTheme {

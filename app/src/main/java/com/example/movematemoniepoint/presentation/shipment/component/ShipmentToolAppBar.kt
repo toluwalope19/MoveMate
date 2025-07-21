@@ -1,7 +1,6 @@
 package com.example.movematemoniepoint.presentation.shipment.component
 
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -14,6 +13,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import com.example.movematemoniepoint.ui.theme.PurplePrimary
 
+/**
+ * A Composable function that displays the top app bar for the shipment screen.
+ *
+ * @param onBack A lambda function to be invoked when the back button is clicked. Defaults to an empty lambda.
+ */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ShipmentTopAppBar(onBack: () -> Unit = {}) {
