@@ -20,7 +20,9 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.example.movematemoniepoint.domain.DeliveryStatus
@@ -83,9 +85,11 @@ fun ShipmentScreen(viewModel: ShipmentViewModel = hiltViewModel(), onBack: () ->
                 Column {
                     Text(
                         text = "Shipments",
-                        style = MaterialTheme.typography.headlineMedium,
+                        style = MaterialTheme.typography.titleMedium,
                         modifier = Modifier.padding(top = 24.dp, start = 16.dp, bottom = 8.dp),
-                        color = Color.Black
+                        color = Color.Black,
+                        fontSize = 20.sp,
+                        fontWeight = FontWeight.SemiBold
                     )
 
                     ShipmentListSection(

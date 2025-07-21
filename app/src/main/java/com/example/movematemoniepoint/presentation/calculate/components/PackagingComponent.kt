@@ -28,6 +28,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.movematemoniepoint.R
 import com.example.movematemoniepoint.ui.theme.MoveMateMoniepointTheme
 
@@ -39,6 +40,7 @@ fun PackagingSection(
         Text(
             text = stringResource(R.string.packaging),
             style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.SemiBold),
+            fontSize = 20.sp,
         )
         Text(
             text = stringResource(R.string.what_are_you_sending),

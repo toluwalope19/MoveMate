@@ -20,6 +20,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.movematemoniepoint.R
 
 
@@ -49,6 +50,7 @@ fun CategoriesSection(
         Text(
             text = "Categories",
             style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.SemiBold),
+            fontSize = 20.sp,
         )
 
         Spacer(modifier = Modifier.height(4.dp))
