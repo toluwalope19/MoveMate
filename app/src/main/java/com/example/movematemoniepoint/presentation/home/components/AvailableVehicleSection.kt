@@ -16,6 +16,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.movematemoniepoint.R
 import com.example.movematemoniepoint.domain.AvailableVehicle
+import com.example.movematemoniepoint.presentation.home.components.VehicleItemCard
 import com.example.movematemoniepoint.ui.theme.MoveMateMoniepointTheme
 
 @Composable

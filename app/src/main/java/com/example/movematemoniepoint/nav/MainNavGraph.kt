@@ -22,7 +22,7 @@ fun MainNavGraph(modifier: Modifier = Modifier) {
     val currentBackStack by navController.currentBackStackEntryAsState()
     val currentRoute = currentBackStack?.destination?.route
 
-    val showBottomBar = currentRoute !in listOf("success")
+    val showBottomBar = currentRoute !in listOf("success","shipment")
 
     Scaffold(
         bottomBar = { if (showBottomBar) {
@@ -56,7 +56,9 @@ fun MainNavGraph(modifier: Modifier = Modifier) {
                 )
             }
 
-            composable("shipment") { ShipmentScreen() }
+            composable("shipment") { ShipmentScreen(
+                onBack = { navController.popBackStack() }
+            ) }
             composable("profile") { /* ProfileScreen */ }
         }
     }

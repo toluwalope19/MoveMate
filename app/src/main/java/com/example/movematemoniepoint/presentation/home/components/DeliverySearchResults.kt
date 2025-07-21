@@ -1,4 +1,4 @@
-package com.example.movematemoniepoint.presentation.components
+package com.example.movematemoniepoint.presentation.home.components
 
 
 import androidx.compose.animation.AnimatedVisibility
@@ -7,7 +7,6 @@ import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.animation.slideInVertically
 import androidx.compose.animation.slideOutVertically
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
@@ -27,6 +26,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.movematemoniepoint.domain.Delivery
 import com.example.movematemoniepoint.domain.DeliveryStatus
+import com.example.movematemoniepoint.presentation.components.DeliveryResultItem
 import com.example.movematemoniepoint.ui.theme.MoveMateMoniepointTheme
 import kotlinx.coroutines.delay
 

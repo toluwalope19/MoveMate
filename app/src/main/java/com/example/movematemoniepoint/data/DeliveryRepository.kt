@@ -65,7 +65,7 @@ object DeliveryRepository {
             weight = "7kg"
         ),
         Delivery(
-            shipmentId = "SHIP-005",
+            shipmentId = "#NEJ546974729557851",
             deliveryItem = "Summer linen jacket",
             time = "10:00 AM, Jul 14",
             status = DeliveryStatus.COMPLETED,
@@ -76,7 +76,7 @@ object DeliveryRepository {
             orderDate = "Sep 20, 2024"
         ),
         Delivery(
-            shipmentId = "SHIP-006",
+            shipmentId = "#NEJ506974729557851",
             deliveryItem = "Office setup desk",
             time = "10:00 AM, Jul 14",
             status = DeliveryStatus.COMPLETED,
@@ -87,7 +87,7 @@ object DeliveryRepository {
             orderDate = "Sep 20, 2024"
         ),
         Delivery(
-            shipmentId = "SHIP-007",
+            shipmentId = "#NEJ576974729557351",
             deliveryItem = "Slim fit jeans",
             time = "10:00 AM, Jul 14",
             status = DeliveryStatus.PENDING_ORDER,
@@ -98,7 +98,7 @@ object DeliveryRepository {
             orderDate = "Jan 20, 2021"
         ),
         Delivery(
-            shipmentId = "SHIP-008",
+            shipmentId = "#NEJ579074729557851",
             deliveryItem = "Taoered-fit jeans",
             time = "10:00 AM, Jul 14",
             status = DeliveryStatus.CANCELLED,
@@ -109,7 +109,7 @@ object DeliveryRepository {
             orderDate = "Sep 20, 2024"
         ),
         Delivery(
-            shipmentId = "SHIP-009",
+            shipmentId = "#NR526974729557851",
             deliveryItem = "Slim fit dress",
             time = "10:00 AM, Jul 14",
             status = DeliveryStatus.CANCELLED,
@@ -120,7 +120,7 @@ object DeliveryRepository {
             orderDate = "Mar 18, 2024"
         ),
         Delivery(
-            shipmentId = "SHIP-010",
+            shipmentId = "#NFJ576974729555851",
             deliveryItem = "Nike Sneakers",
             time = "10:00 AM, Jul 14",
             status = DeliveryStatus.IN_PROGRESS,
@@ -131,7 +131,7 @@ object DeliveryRepository {
             orderDate = "Feb 20, 2021"
         ),
         Delivery(
-            shipmentId = "SHIP-011",
+            shipmentId = "#NMJ576974429557851",
             deliveryItem = "Adidas Shirt",
             time = "10:00 AM, Jul 14",
             status = DeliveryStatus.COMPLETED,
@@ -142,7 +142,7 @@ object DeliveryRepository {
             orderDate = "Sep 20, 2020"
         ),
         Delivery(
-            shipmentId = "SHIP-002",
+            shipmentId = "#NEJ576974529557851",
             deliveryItem = "Football",
             time = "10:00 AM, Jul 14",
             status = DeliveryStatus.IN_PROGRESS,
@@ -153,7 +153,7 @@ object DeliveryRepository {
             orderDate = "Sep 10, 2019"
         ),
         Delivery(
-            shipmentId = "SHIP-020",
+            shipmentId = "#NEJ576974729559181",
             deliveryItem = "Macbook pro M3",
             time = "10:00 AM, Jul 14",
             status = DeliveryStatus.IN_PROGRESS,
